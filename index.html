@@ -90,7 +90,67 @@
     .nav-links { display: none; }
   }
 
-  /* ── HERO ── */
+  /* ── HERO IMAGE ── */
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 48px 80px;
+  }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, var(--steel) 0%, transparent 35%);
+    z-index: 1;
+  }
+
+  .hero-photo-credit {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    color: rgba(245,240,232,0.3);
+    z-index: 2;
+  }
+
+  .hero-photo-credit a {
+    color: rgba(245,240,232,0.3);
+    text-decoration: none;
+  }
+
+  .hero-photo-credit a:hover { color: rgba(245,240,232,0.6); }
+
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-right { height: 280px; }
+    .hero-left { padding: 100px 24px 48px; }
+  }
   .hero {
     min-height: 100vh;
     display: flex;
@@ -625,31 +685,40 @@
 <!-- ══════════════════════════════════════ -->
 
 <!-- HERO EN -->
-<div class="hero" id="top">
+<div class="hero" id="top" style="padding:0; min-height:100vh;">
   <div class="hero-bg"></div>
   <div class="hero-ring ring-1"></div>
   <div class="hero-ring ring-2"></div>
   <div class="hero-ring ring-3"></div>
 
-  <div class="hero-content">
-    <div class="hero-eyebrow">// Costar · Tire & Automotive · Data Consulting</div>
-    <h1 class="hero-title">
-      Your Costar<br>
-      Data.<br>
-      <span class="accent">Finally Working.</span>
-    </h1>
-    <p class="hero-subtitle">
-      Specialist consulting for independent tire dealers — pricing updates, data cleanup, Excel dashboards, and Power BI intelligence built around the Costar software you already run.
-    </p>
-    <div class="hero-meta">
-      <div class="hero-meta-item">Experience<strong>25 Years</strong></div>
-      <div class="hero-meta-item">Platform<strong>Costar Software</strong></div>
-      <div class="hero-meta-item">Delivery<strong>100% Remote</strong></div>
-      <div class="hero-meta-item">Markets<strong>CA · AUS · NZ</strong></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-content">
+        <div class="hero-eyebrow">// Costar · Tire & Automotive · Data Consulting</div>
+        <h1 class="hero-title">
+          Your Costar<br>
+          Data.<br>
+          <span class="accent">Finally Working.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Specialist consulting for independent tire dealers — pricing updates, data cleanup, Excel dashboards, and Power BI intelligence built around the Costar software you already run.
+        </p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">Experience<strong>25 Years</strong></div>
+          <div class="hero-meta-item">Platform<strong>Costar Software</strong></div>
+          <div class="hero-meta-item">Delivery<strong>100% Remote</strong></div>
+          <div class="hero-meta-item">Markets<strong>CA · AUS · NZ</strong></div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn-primary">Let's Talk →</a>
+          <a href="#services" class="btn-secondary">View Services</a>
+        </div>
+      </div>
     </div>
-    <div class="hero-cta">
-      <a href="#contact" class="btn-primary">Let's Talk →</a>
-      <a href="#services" class="btn-secondary">View Services</a>
+
+    <div class="hero-right">
+      <img src="hero.jpg" alt="Land Rover Defender with Cooper tires in forest">
+      <div class="hero-photo-credit">Photo by <a href="https://unsplash.com/@theheadlinedesign" target="_blank">Thomas Tucker</a> on Unsplash</div>
     </div>
   </div>
 
@@ -797,12 +866,12 @@
       <div>
         <p class="contact-lead">"If your Costar system feels heavier than it should — we should talk."</p>
         <p class="contact-detail">
-          Reach out directly at <a href="mailto:tyrelitic@proton.me">tyrelitic@proton.me</a> and I'll respond within one business day.<br>
+          Reach out directly at <a href="/cdn-cgi/l/email-protection#ea9e93988f86839e8389aa9a98859e8584c4878f"><span class="__cf_email__" data-cfemail="8cf8f5fee9e0e5f8e5efccfcfee3f8e3e2a2e1e9">[email&#160;protected]</span></a> and I'll respond within one business day.<br>
           No forms. No bots. Just a real conversation.
         </p>
       </div>
       <div>
-        <a href="mailto:tyrelitic@proton.me" class="btn-primary" style="white-space:nowrap;">Email Pierre →</a>
+        <a href="/cdn-cgi/l/email-protection#d2a6aba0b7bebba6bbb192a2a0bda6bdbcfcbfb7" class="btn-primary" style="white-space:nowrap;">Email Pierre →</a>
       </div>
     </div>
   </div>
@@ -954,21 +1023,9 @@
       <div>
         <p class="contact-lead">« Si votre système Costar semble plus lourd qu'il ne devrait — parlons-en. »</p>
         <p class="contact-detail">
-          Écrivez-moi directement à <a href="mailto:tyrelitic@proton.me">tyrelitic@proton.me</a> et je répondrai dans un délai d'un jour ouvrable.<br>
+          Écrivez-moi directement à <a href="/cdn-cgi/l/email-protection#ec98959e89808598858fac9c9e83988382c28189"><span class="__cf_email__" data-cfemail="b4c0cdc6d1d8ddc0ddd7f4c4c6dbc0dbda9ad9d1">[email&#160;protected]</span></a> et je répondrai dans un délai d'un jour ouvrable.<br>
           Pas de formulaires. Pas de robots. Une vraie conversation.
         </p>
       </div>
       <div>
-        <a href="mailto:tyrelitic@proton.me" class="btn-primary" style="white-space:nowrap;">Écrire à Pierre →</a>
-      </div>    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Tyrelitic <span>Data Solutions</span></div>
-  <div class="footer-copy">© 2026 Tyrelitic Data Solutions · Pierre LeBlanc · Sherwood Park, Alberta · tyrelitic.com</div>
-</footer>
-
-</body>
-</html>
+        <a href="/cdn-cgi/l/email-protection#fb8f82899e97928f9298bb8b89948f9495d5969e" class="btn-pri
