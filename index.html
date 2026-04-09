@@ -14,347 +14,87 @@
     --steel-mid: #2a3140;
     --steel-light: #3a4255;
     --cream: #f5f0e8;
-    --warm-grey: #8a8078;
     --divider: rgba(245,240,232,0.1);
-    --divider-light: #d4ccc0;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--steel);
-    color: var(--cream);
-    font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 18px;
-    line-height: 1.65;
-    overflow-x: hidden;
-  }
+  body { background: var(--steel); color: var(--cream); font-family: 'Crimson Pro', Georgia, serif; font-size: 18px; line-height: 1.65; overflow-x: hidden; }
 
   /* NAV */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 48px;
-    background: rgba(30,37,53,0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--divider);
-  }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 12px 48px; background: rgba(30,37,53,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--divider); }
   .nav-logo img { height: 56px; width: auto; display: block; }
   .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.6);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
+  .nav-links a { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.6); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--rust-light); }
-  .nav-cta {
-    color: #fff !important;
-    background: var(--rust);
-    padding: 8px 18px;
-    transition: background 0.2s !important;
-  }
+  .nav-cta { color: #fff !important; background: var(--rust); padding: 8px 18px; transition: background 0.2s !important; }
   .nav-cta:hover { background: var(--rust-light) !important; }
-  @media (max-width: 680px) { nav { padding: 16px 24px; } .nav-links { display: none; } }
+  @media (max-width: 680px) { nav { padding: 12px 24px; } .nav-links { display: none; } }
 
   /* HERO */
-  .hero {
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(196,75,27,0.08) 0%, transparent 70%);
-  }
-  .hero-bg::after {
-    content: '';
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(245,240,232,0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(245,240,232,0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
-  }
-  .hero-ring {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(196,75,27,0.15);
-    pointer-events: none;
-  }
+  .hero { min-height: 100vh; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(196,75,27,0.08) 0%, transparent 70%); }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(245,240,232,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(245,240,232,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(196,75,27,0.15); pointer-events: none; }
   .ring-1 { width: 500px; height: 500px; top: -100px; right: -100px; }
   .ring-2 { width: 300px; height: 300px; top: 50px; right: 50px; border-color: rgba(196,75,27,0.08); }
   .ring-3 { width: 200px; height: 200px; bottom: 80px; left: 5%; border-color: rgba(245,240,232,0.05); }
-
-  .hero-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex: 1;
-    position: relative;
-    z-index: 1;
-  }
-  .hero-left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 120px 48px 80px;
-  }
+  .hero-inner { display: grid; grid-template-columns: 1fr 1fr; flex: 1; position: relative; z-index: 1; }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; }
   .hero-right { position: relative; overflow: hidden; min-height: 500px; }
-  .hero-right img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
-  }
-  .hero-right::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: linear-gradient(to right, var(--steel) 0%, transparent 35%);
-    z-index: 1;
-  }
-  .hero-photo-credit {
-    position: absolute;
-    bottom: 12px; right: 12px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    color: rgba(245,240,232,0.3);
-    z-index: 2;
-  }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+  .hero-right::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--steel) 0%, transparent 35%); z-index: 1; }
+  .hero-photo-credit { position: absolute; bottom: 12px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(245,240,232,0.3); z-index: 2; }
   .hero-photo-credit a { color: rgba(245,240,232,0.3); text-decoration: none; }
   .hero-photo-credit a:hover { color: rgba(245,240,232,0.6); }
-
-  @media (max-width: 768px) {
-    .hero-inner { grid-template-columns: 1fr; }
-    .hero-right { min-height: 280px; }
-    .hero-left { padding: 100px 24px 48px; }
-  }
-
-  .hero-eyebrow {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--rust-light);
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards 0.2s;
-  }
-  .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(56px, 10vw, 110px);
-    line-height: 0.92;
-    letter-spacing: 0.03em;
-    color: #fff;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards 0.4s;
-  }
+  @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .hero-right { min-height: 280px; } .hero-left { padding: 100px 24px 48px; } }
+  .hero-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--rust-light); margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 10vw, 110px); line-height: 0.92; letter-spacing: 0.03em; color: #fff; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
   .hero-title .accent { color: var(--rust-light); }
-  .hero-subtitle {
-    margin-top: 28px;
-    font-size: clamp(18px, 2.5vw, 22px);
-    font-style: italic;
-    font-weight: 300;
-    color: rgba(245,240,232,0.7);
-    max-width: 540px;
-    line-height: 1.5;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards 0.6s;
-  }
-  .hero-meta {
-    margin-top: 40px;
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards 0.8s;
-  }
-  .hero-meta-item {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(245,240,232,0.4);
-    border-left: 2px solid var(--rust);
-    padding-left: 12px;
-  }
+  .hero-subtitle { margin-top: 28px; font-size: clamp(18px, 2.5vw, 22px); font-style: italic; font-weight: 300; color: rgba(245,240,232,0.7); max-width: 540px; line-height: 1.5; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; }
+  .hero-meta { margin-top: 40px; display: flex; gap: 40px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s; }
+  .hero-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.4); border-left: 2px solid var(--rust); padding-left: 12px; }
   .hero-meta-item strong { display: block; font-size: 12px; color: var(--cream); margin-top: 2px; }
-  .hero-cta {
-    margin-top: 48px;
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards 1s;
-  }
+  .hero-cta { margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
 
   /* BUTTONS */
-  .btn-primary {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    background: var(--rust);
-    color: #fff;
-    padding: 16px 32px;
-    text-decoration: none;
-    transition: background 0.2s, transform 0.2s;
-    display: inline-block;
-  }
+  .btn-primary { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 16px 32px; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
   .btn-primary:hover { background: var(--rust-light); transform: translateY(-2px); }
-  .btn-secondary {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    border: 1px solid rgba(245,240,232,0.3);
-    color: rgba(245,240,232,0.7);
-    padding: 16px 32px;
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
-    display: inline-block;
-  }
+  .btn-secondary { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid rgba(245,240,232,0.3); color: rgba(245,240,232,0.7); padding: 16px 32px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
   .btn-secondary:hover { border-color: var(--rust-light); color: var(--rust-light); }
 
   /* SECTIONS */
-  section {
-    padding: 100px 48px;
-    border-top: 1px solid var(--divider);
-    position: relative;
-  }
+  section { padding: 100px 48px; border-top: 1px solid var(--divider); position: relative; }
   @media (max-width: 680px) { section { padding: 72px 24px; } }
   .section-inner { max-width: 960px; margin: 0 auto; }
-  .section-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 20px;
-  }
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(36px, 5vw, 56px);
-    letter-spacing: 0.04em;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 24px;
-  }
+  .section-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--rust); margin-bottom: 20px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px); letter-spacing: 0.04em; color: #fff; line-height: 1; margin-bottom: 24px; }
 
   /* SERVICES */
   #services { background: var(--steel-mid); }
   #fr-services { background: var(--steel); }
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1px;
-    background: var(--divider);
-    margin-top: 48px;
-    border: 1px solid var(--divider);
-  }
-  .service-card {
-    background: var(--steel);
-    padding: 36px 28px;
-    transition: background 0.25s;
-    position: relative;
-    overflow: hidden;
-  }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--divider); margin-top: 48px; border: 1px solid var(--divider); }
+  .service-card { background: var(--steel); padding: 36px 28px; transition: background 0.25s; position: relative; overflow: hidden; }
   #fr-services .service-card { background: var(--steel-mid); }
-  .service-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--rust);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--rust); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
   .service-card:hover { background: var(--steel-light); }
   .service-card:hover::before { transform: scaleX(1); }
-  .service-icon {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: var(--rust);
-    margin-bottom: 16px;
-    text-transform: uppercase;
-  }
-  .service-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 0.04em;
-    color: #fff;
-    line-height: 1.05;
-    margin-bottom: 14px;
-  }
-  .service-desc {
-    font-size: 15px;
-    color: rgba(245,240,232,0.6);
-    font-style: italic;
-    line-height: 1.55;
-    margin-bottom: 20px;
-  }
+  .service-icon { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: var(--rust); margin-bottom: 16px; text-transform: uppercase; }
+  .service-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.04em; color: #fff; line-height: 1.05; margin-bottom: 14px; }
+  .service-desc { font-size: 15px; color: rgba(245,240,232,0.6); font-style: italic; line-height: 1.55; margin-bottom: 20px; }
   .service-list { list-style: none; }
-  .service-list li {
-    font-size: 14px;
-    color: rgba(245,240,232,0.75);
-    padding: 6px 0;
-    border-bottom: 1px solid var(--divider);
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-  }
-  .service-list li::before {
-    content: '→';
-    color: var(--rust);
-    flex-shrink: 0;
-    margin-top: 1px;
-    font-size: 12px;
-  }
-  .coming-soon {
-    display: inline-block;
-    margin-top: 16px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust-light);
-    border: 1px solid var(--rust);
-    padding: 4px 10px;
-  }
+  .service-list li { font-size: 14px; color: rgba(245,240,232,0.75); padding: 6px 0; border-bottom: 1px solid var(--divider); display: flex; gap: 10px; align-items: flex-start; }
+  .service-list li::before { content: '→'; color: var(--rust); flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+  .coming-soon { display: inline-block; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rust-light); border: 1px solid var(--rust); padding: 4px 10px; }
 
   /* ABOUT */
   #about { background: var(--steel); }
   #fr-about { background: var(--steel-mid); }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    margin-top: 48px;
-    align-items: start;
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 48px; align-items: start; }
   @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
   .about-text p { font-size: 17px; color: rgba(245,240,232,0.8); margin-bottom: 18px; line-height: 1.7; }
   .about-text p:last-child { margin-bottom: 0; }
   .about-text strong { color: #fff; }
-  .about-stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--divider);
-    border: 1px solid var(--divider);
-    height: fit-content;
-  }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--divider); border: 1px solid var(--divider); height: fit-content; }
   .stat-box { background: var(--steel-mid); padding: 32px 24px; text-align: center; }
   #fr-about .stat-box { background: var(--steel); }
   .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: var(--rust-light); line-height: 1; letter-spacing: 0.02em; }
@@ -362,14 +102,7 @@
 
   /* MARKETS */
   #markets { background: var(--steel-mid); }
-  .markets-row {
-    display: flex;
-    gap: 1px;
-    background: var(--divider);
-    border: 1px solid var(--divider);
-    margin-top: 48px;
-    flex-wrap: wrap;
-  }
+  .markets-row { display: flex; gap: 1px; background: var(--divider); border: 1px solid var(--divider); margin-top: 48px; flex-wrap: wrap; }
   .market-card { flex: 1; min-width: 200px; background: var(--steel); padding: 36px 28px; transition: background 0.2s; }
   .market-card:hover { background: var(--steel-light); }
   .market-flag { font-size: 32px; margin-bottom: 12px; }
@@ -379,61 +112,31 @@
   /* CONTACT */
   #contact { background: var(--steel); }
   #fr-contact { background: var(--steel-mid); }
-  .contact-box {
-    margin-top: 48px;
-    border: 1px solid var(--divider);
-    border-left: 4px solid var(--rust);
-    padding: 48px;
-    background: var(--steel-mid);
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 48px;
-    align-items: center;
-  }
+  .contact-box { margin-top: 48px; border: 1px solid var(--divider); border-left: 4px solid var(--rust); padding: 48px; background: var(--steel-mid); display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
   #fr-contact .contact-box { background: var(--steel); }
   @media (max-width: 680px) { .contact-box { grid-template-columns: 1fr; padding: 32px 24px; } }
   .contact-lead { font-size: clamp(20px, 3vw, 28px); font-style: italic; color: rgba(245,240,232,0.85); line-height: 1.4; margin-bottom: 16px; }
   .contact-detail { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: rgba(245,240,232,0.5); }
   .contact-detail a { color: var(--rust-light); text-decoration: none; }
   .contact-detail a:hover { text-decoration: underline; }
+  .contact-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
 
-  /* LANGUAGE DIVIDER */
-  .lang-divider {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding: 48px;
-    background: var(--rust);
-    justify-content: center;
-  }
+  /* LANG DIVIDER */
+  .lang-divider { display: flex; align-items: center; gap: 24px; padding: 48px; background: var(--rust); justify-content: center; }
   .lang-divider-text { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.1em; color: #fff; }
   .lang-divider-line { flex: 1; max-width: 120px; height: 1px; background: rgba(255,255,255,0.3); }
 
   /* FOOTER */
-  footer {
-    background: var(--ink);
-    padding: 32px 48px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    border-top: 1px solid var(--divider);
-  }
+  footer { background: var(--ink); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--divider); }
   .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.06em; color: #fff; }
   .footer-logo span { color: var(--rust-light); }
   .footer-copy { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: rgba(245,240,232,0.3); }
 
-  /* ANIMATIONS */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo"><img src="tyrelitic-logo-dark.svg" alt="Tyrelitic Data Solutions"></div>
   <ul class="nav-links">
@@ -442,15 +145,12 @@
     <li><a href="#markets">Markets</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#fr-hero">Fran&#231;ais</a></li>
-    <li><a href="/cdn-cgi/l/email-protection#27535e55424b4e534e4467575548534849094a42" class="nav-cta">Get in Touch</a></li>
+    <li><a href="mailto:tyrelitic@proton.me" class="nav-cta">Get in Touch</a></li>
   </ul>
 </nav>
 
-<!-- ============================================================ -->
-<!--                        ENGLISH                               -->
-<!-- ============================================================ -->
+<!-- ENGLISH -->
 
-<!-- HERO EN -->
 <div class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-ring ring-1"></div>
@@ -468,7 +168,7 @@
         <div class="hero-meta-item">Markets<strong>CA &middot; AUS &middot; NZ</strong></div>
       </div>
       <div class="hero-cta">
-        <a href="/cdn-cgi/l/email-protection#cdb9b4bfa8a1a4b9a4ae8dbdbfa2b9a2a3e3a0a8" class="btn-primary">Let&#39;s Talk &rarr;</a>
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary">Let&#39;s Talk &rarr;</a>
         <a href="#services" class="btn-secondary">View Services</a>
       </div>
     </div>
@@ -479,7 +179,6 @@
   </div>
 </div>
 
-<!-- SERVICES EN -->
 <section id="services">
   <div class="section-inner">
     <div class="section-label">// What I Do</div>
@@ -535,7 +234,6 @@
   </div>
 </section>
 
-<!-- ABOUT EN -->
 <section id="about">
   <div class="section-inner">
     <div class="section-label">// Who I Am</div>
@@ -551,13 +249,12 @@
         <div class="stat-box"><div class="stat-number">25</div><div class="stat-label">Years in Tire &amp; Auto</div></div>
         <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Core Services</div></div>
         <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Markets Served</div></div>
-        <div class="stat-box"><div class="stat-number" style="font-size:36px; padding-top:8px;">Costar</div><div class="stat-label">Exclusive Platform Focus</div></div>
+        <div class="stat-box"><div class="stat-number" style="font-size:36px;padding-top:8px;">Costar</div><div class="stat-label">Exclusive Platform Focus</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MARKETS EN -->
 <section id="markets">
   <div class="section-inner">
     <div class="section-label">// Where I Work</div>
@@ -571,7 +268,6 @@
   </div>
 </section>
 
-<!-- CONTACT EN -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-label">// Get in Touch</div>
@@ -579,16 +275,15 @@
     <div class="contact-box">
       <div>
         <p class="contact-lead">&ldquo;If your Costar system feels heavier than it should &mdash; we should talk.&rdquo;</p>
-        <p class="contact-detail">Reach out directly at <a href="/cdn-cgi/l/email-protection#66121f14030a0f120f0526161409120908480b03"><span class="__cf_email__" data-cfemail="2c58555e49404558454f6c5c5e43584342024149">[email&#160;protected]</span></a> and I&#39;ll respond within one business day.<br>No forms. No bots. Just a real conversation.</p>
+        <p class="contact-detail">Reach out at <a href="mailto:tyrelitic@proton.me">tyrelitic@proton.me</a> or book a call directly. I&#39;ll respond within one business day.<br>No forms. No bots. Just a real conversation.</p>
       </div>
-      <div><a href="/cdn-cgi/l/email-protection#0a7e73786f66637e63694a7a78657e656424676f" class="btn-primary" style="white-space:nowrap;">Email Pierre &rarr;</a></div>
+      <div class="contact-buttons">
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary" style="white-space:nowrap;">Email Pierre &rarr;</a>
+        <a href="https://calendar.proton.me/bookings#vPKWCAFpTAHfR4FjWbgsDrqKMrx75NHlermlY7PmTB0=" target="_blank" class="btn-secondary" style="white-space:nowrap;">Book a Call &rarr;</a>
+      </div>
     </div>
   </div>
 </section>
-
-<!-- ============================================================ -->
-<!--                    LANGUAGE DIVIDER                          -->
-<!-- ============================================================ -->
 
 <div class="lang-divider">
   <div class="lang-divider-line"></div>
@@ -596,11 +291,8 @@
   <div class="lang-divider-line"></div>
 </div>
 
-<!-- ============================================================ -->
-<!--                        FRAN&#199;AIS                              -->
-<!-- ============================================================ -->
+<!-- FRANCAIS -->
 
-<!-- HERO FR -->
 <div class="hero" id="fr-hero" style="min-height:80vh; background: var(--steel-mid);">
   <div class="hero-bg"></div>
   <div class="hero-ring ring-1"></div>
@@ -611,7 +303,7 @@
       <h1 class="hero-title">Vos donn&#233;es<br>Costar.<br><span class="accent">Enfin utiles.</span></h1>
       <p class="hero-subtitle">Consultation sp&#233;cialis&#233;e pour les concessionnaires de pneus ind&#233;pendants &mdash; mises &#224; jour de prix, nettoyage de donn&#233;es, tableaux de bord Excel et intelligence Power BI, con&#231;us autour du logiciel Costar que vous utilisez d&#233;j&#224;.</p>
       <div class="hero-cta">
-        <a href="/cdn-cgi/l/email-protection#295d505b4c45405d404a69595b465d464707444c" class="btn-primary">Parlons-en &rarr;</a>
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary">Parlons-en &rarr;</a>
         <a href="#fr-services" class="btn-secondary">Voir les services</a>
       </div>
     </div>
@@ -622,7 +314,6 @@
   </div>
 </div>
 
-<!-- SERVICES FR -->
 <section id="fr-services">
   <div class="section-inner">
     <div class="section-label">// Ce que je fais</div>
@@ -678,7 +369,6 @@
   </div>
 </section>
 
-<!-- ABOUT FR -->
 <section id="fr-about">
   <div class="section-inner">
     <div class="section-label">// Qui je suis</div>
@@ -694,13 +384,12 @@
         <div class="stat-box"><div class="stat-number">25</div><div class="stat-label">Ans dans le secteur du pneu</div></div>
         <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Services principaux</div></div>
         <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">March&#233;s desservis</div></div>
-        <div class="stat-box"><div class="stat-number" style="font-size:36px; padding-top:8px;">Costar</div><div class="stat-label">Plateforme exclusive</div></div>
+        <div class="stat-box"><div class="stat-number" style="font-size:36px;padding-top:8px;">Costar</div><div class="stat-label">Plateforme exclusive</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT FR -->
 <section id="fr-contact">
   <div class="section-inner">
     <div class="section-label">// Contactez-moi</div>
@@ -708,6 +397,20 @@
     <div class="contact-box">
       <div>
         <p class="contact-lead">&#171;&nbsp;Si votre syst&#232;me Costar semble plus lourd qu&#39;il ne devrait &mdash; parlons-en.&nbsp;&#187;</p>
-        <p class="contact-detail">&#201;crivez-moi directement &#224; <a href="/cdn-cgi/l/email-protection#bfcbc6cddad3d6cbd6dcffcfcdd0cbd0d191d2da"><span class="__cf_email__" data-cfemail="a5d1dcd7c0c9ccd1ccc6e5d5d7cad1cacb8bc8c0">[email&#160;protected]</span></a> et je r&#233;pondrai dans un d&#233;lai d&#39;un jour ouvrable.<br>Pas de formulaires. Pas de robots. Une vraie conversation.</p>
+        <p class="contact-detail">&#201;crivez-moi &#224; <a href="mailto:tyrelitic@proton.me">tyrelitic@proton.me</a> ou r&#233;servez un appel directement. Je r&#233;pondrai dans un d&#233;lai d&#39;un jour ouvrable.<br>Pas de formulaires. Pas de robots. Une vraie conversation.</p>
       </div>
-     
+      <div class="contact-buttons">
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary" style="white-space:nowrap;">&#201;crire &#224; Pierre &rarr;</a>
+        <a href="https://calendar.proton.me/bookings#vPKWCAFpTAHfR4FjWbgsDrqKMrx75NHlermlY7PmTB0=" target="_blank" class="btn-secondary" style="white-space:nowrap;">R&#233;server un appel &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Tyrelitic <span>Data Solutions</span></div>
+  <div class="footer-copy">&copy; 2026 Tyrelitic Data Solutions &middot; Pierre LeBlanc &middot; Sherwood Park, Alberta &middot; tyrelitic.com</div>
+</footer>
+
+</body>
+</html>
