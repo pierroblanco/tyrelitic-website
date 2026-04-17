@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>Tyrelitic Data Solutions | Costar Tire Dealer Consultant — Canada, Australia, New Zealand</title>
+<meta name="description" content="Expert Costar software consulting for independent tire dealers. Pricing updates, data cleanup, Excel dashboards, and Power BI reporting. Serving dealers across Canada, Australia (via Microhouse), and New Zealand. Remote. Flexible. 25 years of tire industry experience.">
+<meta name="keywords" content="Costar software consultant, Costar tire dealer support, Costar pricing update, tire pricing matrix, Costar data cleanup, Microhouse tire software, independent tire dealer consultant, tire dealer Excel reporting, Power BI tire dealer, Costar workflow consulting, tire dealer data solutions, Costar Canada, Costar Australia, Costar New Zealand, Microhouse Queensland, tire shop software support, automotive dealer data consulting">
+<meta name="author" content="Pierre LeBlanc — Tyrelitic Data Solutions">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://tyrelitic.com">
+
+<!-- Geographic targeting -->
+<meta name="geo.region" content="CA-AB">
+<meta name="geo.placename" content="Sherwood Park, Alberta, Canada">
+<meta name="geo.region" content="AU-QLD">
+<meta name="geo.region" content="NZ">
+
+<!-- Open Graph (social sharing) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tyrelitic.com">
+<meta property="og:title" content="Tyrelitic Data Solutions | Costar Tire Dealer Consultant">
+<meta property="og:description" content="Expert Costar software consulting for independent tire dealers across Canada, Australia, and New Zealand. Pricing updates, data cleanup, Excel dashboards, and Power BI reporting.">
+<meta property="og:image" content="https://tyrelitic.com/tyrelitic-logo-dark.svg">
+<meta property="og:locale" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+
+<!-- Twitter/X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tyrelitic Data Solutions | Costar Tire Dealer Consultant">
+<meta name="twitter:description" content="Expert Costar software consulting for independent tire dealers across Canada, Australia, and New Zealand.">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Tyrelitic Data Solutions",
+  "description": "Expert Costar software consulting for independent tire dealers. Pricing updates, data cleanup, Excel dashboards, and Power BI reporting.",
+  "url": "https://tyrelitic.com",
+  "email": "tyrelitic@proton.me",
+  "founder": {
+    "@type": "Person",
+    "name": "Pierre LeBlanc"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Sherwood Park",
+    "addressRegion": "Alberta",
+    "addressCountry": "CA"
+  },
+  "areaServed": ["CA", "AU", "NZ"],
+  "serviceType": [
+    "Costar Software Consulting",
+    "Tire Dealer Data Cleanup",
+    "Pricing Matrix Updates",
+    "Excel Sales Dashboards",
+    "Power BI Reporting"
+  ],
+  "knowsAbout": ["Costar Software", "Microhouse", "Tire Pricing", "Automotive Data", "Power BI", "Microsoft Excel"]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d0d;
+    --rust: #c44b1b;
+    --rust-light: #e85d2a;
+    --steel: #1e2535;
+    --steel-mid: #2a3140;
+    --steel-light: #3a4255;
+    --cream: #f5f0e8;
+    --divider: rgba(245,240,232,0.1);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--steel); color: var(--cream); font-family: 'Crimson Pro', Georgia, serif; font-size: 18px; line-height: 1.65; overflow-x: hidden; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; justify-content: space-between; align-items: center; padding: 12px 48px; background: rgba(30,37,53,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--divider); }
+  .nav-logo img { height: 56px; width: auto; display: block; }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.6); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--rust-light); }
+  .nav-cta { color: #fff !important; background: var(--rust); padding: 8px 18px; transition: background 0.2s !important; }
+  .nav-cta:hover { background: var(--rust-light) !important; }
+  @media (max-width: 680px) { nav { padding: 12px 24px; } .nav-links { display: none; } }
+
+  /* HERO */
+  .hero { min-height: 100vh; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(196,75,27,0.08) 0%, transparent 70%); }
+  .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(245,240,232,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(245,240,232,0.02) 1px, transparent 1px); background-size: 60px 60px; }
+  .hero-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(196,75,27,0.15); pointer-events: none; }
+  .ring-1 { width: 500px; height: 500px; top: -100px; right: -100px; }
+  .ring-2 { width: 300px; height: 300px; top: 50px; right: 50px; border-color: rgba(196,75,27,0.08); }
+  .ring-3 { width: 200px; height: 200px; bottom: 80px; left: 5%; border-color: rgba(245,240,232,0.05); }
+  .hero-inner { display: grid; grid-template-columns: 1fr 1fr; flex: 1; position: relative; z-index: 1; }
+  .hero-left { display: flex; flex-direction: column; justify-content: center; padding: 120px 48px 80px; }
+  .hero-right { position: relative; overflow: hidden; min-height: 500px; }
+  .hero-right img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+  .hero-right::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, var(--steel) 0%, transparent 35%); z-index: 1; }
+  .hero-photo-credit { position: absolute; bottom: 12px; right: 12px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: rgba(245,240,232,0.3); z-index: 2; }
+  .hero-photo-credit a { color: rgba(245,240,232,0.3); text-decoration: none; }
+  .hero-photo-credit a:hover { color: rgba(245,240,232,0.6); }
+  @media (max-width: 768px) { .hero-inner { grid-template-columns: 1fr; } .hero-right { min-height: 280px; } .hero-left { padding: 100px 24px 48px; } }
+  .hero-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--rust-light); margin-bottom: 20px; opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s; }
+  .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(56px, 10vw, 110px); line-height: 0.92; letter-spacing: 0.03em; color: #fff; opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+  .hero-title .accent { color: var(--rust-light); }
+  .hero-subtitle { margin-top: 28px; font-size: clamp(18px, 2.5vw, 22px); font-style: italic; font-weight: 300; color: rgba(245,240,232,0.7); max-width: 540px; line-height: 1.5; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; }
+  .hero-meta { margin-top: 40px; display: flex; gap: 40px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s; }
+  .hero-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.4); border-left: 2px solid var(--rust); padding-left: 12px; }
+  .hero-meta-item strong { display: block; font-size: 12px; color: var(--cream); margin-top: 2px; }
+  .hero-cta { margin-top: 48px; display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
+
+  /* BUTTONS */
+  .btn-primary { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; background: var(--rust); color: #fff; padding: 16px 32px; text-decoration: none; transition: background 0.2s, transform 0.2s; display: inline-block; }
+  .btn-primary:hover { background: var(--rust-light); transform: translateY(-2px); }
+  .btn-secondary { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid rgba(245,240,232,0.3); color: rgba(245,240,232,0.7); padding: 16px 32px; text-decoration: none; transition: border-color 0.2s, color 0.2s; display: inline-block; }
+  .btn-secondary:hover { border-color: var(--rust-light); color: var(--rust-light); }
+
+  /* SECTIONS */
+  section { padding: 100px 48px; border-top: 1px solid var(--divider); position: relative; }
+  @media (max-width: 680px) { section { padding: 72px 24px; } }
+  .section-inner { max-width: 960px; margin: 0 auto; }
+  .section-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--rust); margin-bottom: 20px; }
+  .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px, 5vw, 56px); letter-spacing: 0.04em; color: #fff; line-height: 1; margin-bottom: 24px; }
+
+  /* SERVICES */
+  #services { background: var(--steel-mid); }
+  #fr-services { background: var(--steel); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1px; background: var(--divider); margin-top: 48px; border: 1px solid var(--divider); }
+  .service-card { background: var(--steel); padding: 36px 28px; transition: background 0.25s; position: relative; overflow: hidden; }
+  #fr-services .service-card { background: var(--steel-mid); }
+  .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--rust); transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
+  .service-card:hover { background: var(--steel-light); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.2em; color: var(--rust); margin-bottom: 16px; text-transform: uppercase; }
+  .service-name { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.04em; color: #fff; line-height: 1.05; margin-bottom: 14px; }
+  .service-desc { font-size: 15px; color: rgba(245,240,232,0.6); font-style: italic; line-height: 1.55; margin-bottom: 20px; }
+  .service-list { list-style: none; }
+  .service-list li { font-size: 14px; color: rgba(245,240,232,0.75); padding: 6px 0; border-bottom: 1px solid var(--divider); display: flex; gap: 10px; align-items: flex-start; }
+  .service-list li::before { content: '→'; color: var(--rust); flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+  .coming-soon { display: inline-block; margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rust-light); border: 1px solid var(--rust); padding: 4px 10px; }
+
+  /* ABOUT */
+  #about { background: var(--steel); }
+  #fr-about { background: var(--steel-mid); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 48px; align-items: start; }
+  @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .about-text p { font-size: 17px; color: rgba(245,240,232,0.8); margin-bottom: 18px; line-height: 1.7; }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text strong { color: #fff; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--divider); border: 1px solid var(--divider); height: fit-content; }
+  .stat-box { background: var(--steel-mid); padding: 32px 24px; text-align: center; }
+  #fr-about .stat-box { background: var(--steel); }
+  .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 52px; color: var(--rust-light); line-height: 1; letter-spacing: 0.02em; }
+  .stat-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.45); margin-top: 8px; line-height: 1.4; }
+
+  /* MARKETS */
+  #markets { background: var(--steel-mid); }
+  .markets-row { display: flex; gap: 1px; background: var(--divider); border: 1px solid var(--divider); margin-top: 48px; flex-wrap: wrap; }
+  .market-card { flex: 1; min-width: 200px; background: var(--steel); padding: 36px 28px; transition: background 0.2s; }
+  .market-card:hover { background: var(--steel-light); }
+  .market-flag { font-size: 32px; margin-bottom: 12px; }
+  .market-name { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.04em; color: #fff; margin-bottom: 8px; }
+  .market-note { font-size: 13px; color: rgba(245,240,232,0.5); font-style: italic; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.05em; }
+
+  /* CONTACT */
+  #contact { background: var(--steel); }
+  #fr-contact { background: var(--steel-mid); }
+  .contact-box { margin-top: 48px; border: 1px solid var(--divider); border-left: 4px solid var(--rust); padding: 48px; background: var(--steel-mid); display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
+  #fr-contact .contact-box { background: var(--steel); }
+  @media (max-width: 680px) { .contact-box { grid-template-columns: 1fr; padding: 32px 24px; } }
+  .contact-lead { font-size: clamp(20px, 3vw, 28px); font-style: italic; color: rgba(245,240,232,0.85); line-height: 1.4; margin-bottom: 16px; }
+  .contact-detail { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.1em; color: rgba(245,240,232,0.5); }
+  .contact-detail a { color: var(--rust-light); text-decoration: none; }
+  .contact-detail a:hover { text-decoration: underline; }
+  .contact-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+  /* LANG DIVIDER */
+  .lang-divider { display: flex; align-items: center; gap: 24px; padding: 48px; background: var(--rust); justify-content: center; }
+  .lang-divider-text { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 0.1em; color: #fff; }
+  .lang-divider-line { flex: 1; max-width: 120px; height: 1px; background: rgba(255,255,255,0.3); }
+
+  /* FOOTER */
+  footer { background: var(--ink); padding: 32px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-top: 1px solid var(--divider); }
+  .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.06em; color: #fff; }
+  .footer-logo span { color: var(--rust-light); }
+  .footer-copy { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: rgba(245,240,232,0.3); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo"><img src="tyrelitic-logo-dark.svg" alt="Tyrelitic Data Solutions"></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#markets">Markets</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#fr-hero">Fran&#231;ais</a></li>
+    <li><a href="mailto:tyrelitic@proton.me" class="nav-cta">Get in Touch</a></li>
+  </ul>
+</nav>
+
+<!-- ENGLISH -->
+
+<div class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-ring ring-1"></div>
+  <div class="hero-ring ring-2"></div>
+  <div class="hero-ring ring-3"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">// Costar &middot; Tire &amp; Automotive &middot; Data Consulting</div>
+      <h1 class="hero-title">Your Costar<br>Data.<br><span class="accent">Finally Working.</span></h1>
+      <p class="hero-subtitle">Specialist consulting for independent tire dealers &mdash; pricing updates, data cleanup, Excel dashboards, and Power BI intelligence built around the Costar software you already run.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">Experience<strong>25 Years</strong></div>
+        <div class="hero-meta-item">Platform<strong>Costar Software</strong></div>
+        <div class="hero-meta-item">Delivery<strong>100% Remote</strong></div>
+        <div class="hero-meta-item">Markets<strong>CA &middot; AUS &middot; NZ</strong></div>
+      </div>
+      <div class="hero-cta">
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary">Let&#39;s Talk &rarr;</a>
+        <a href="#services" class="btn-secondary">View Services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="hero.jpg" alt="Land Rover Defender with Cooper tires in forest">
+      <div class="hero-photo-credit">Photo by <a href="https://unsplash.com/@theheadlinedesign" target="_blank">Thomas Tucker</a> on Unsplash</div>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">// What I Do</div>
+    <h2 class="section-title">Services Built for Costar Dealers</h2>
+    <p style="max-width:560px; color:rgba(245,240,232,0.6); font-style:italic;">Every service is designed specifically for independent tire dealers running Costar &mdash; no generalist guesswork, no learning curve on my end.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">01 &middot; Cleanup</div>
+        <div class="service-name">Data Cleanup &amp; Pricing Updates</div>
+        <div class="service-desc">Your database is the engine. Let&#39;s make sure it&#39;s running clean.</div>
+        <ul class="service-list">
+          <li>Seasonal tire pricing matrix updates</li>
+          <li>Customer &amp; inventory data cleanup</li>
+          <li>Costar configuration reviews</li>
+          <li>One-time or scheduled projects</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">02 &middot; Consulting</div>
+        <div class="service-name">Costar Workflow Consulting</div>
+        <div class="service-desc">Expert guidance on getting the most out of how your team uses Costar every day.</div>
+        <ul class="service-list">
+          <li>Monthly retainer for ongoing consulting</li>
+          <li>Workflow optimization &amp; best practices</li>
+          <li>Staff guidance &amp; process improvement</li>
+          <li>Remote &mdash; flexible scheduling, after-hours available</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">03 &middot; Reporting</div>
+        <div class="service-name">Excel Sales Dashboards</div>
+        <div class="service-desc">Your numbers, formatted to actually tell a story your team can act on.</div>
+        <ul class="service-list">
+          <li>Custom Excel sales report builds</li>
+          <li>Pivot table dashboards by rep, location &amp; product</li>
+          <li>Monthly refresh retainer available</li>
+          <li>Designed for tire dealer sales teams</li>
+        </ul>
+      </div>
+      <div class="service-card" style="background: linear-gradient(135deg, var(--steel-mid) 0%, rgba(196,75,27,0.12) 100%);">
+        <div class="service-icon">04 &middot; Intelligence</div>
+        <div class="service-name">Power BI Live Dashboards</div>
+        <div class="service-desc">Real-time intelligence, connected directly to your Costar database.</div>
+        <ul class="service-list">
+          <li>Live Costar database connection</li>
+          <li>Sales, inventory &amp; pricing dashboards</li>
+          <li>Custom KPIs for your dealership</li>
+          <li>Business intelligence, automated</li>
+        </ul>
+        <div class="coming-soon">Launching Spring 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-inner">
+    <div class="section-label">// Who I Am</div>
+    <h2 class="section-title">Learned at the Source</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>I&#39;m <strong>Pierre LeBlanc</strong>, founder of Tyrelitic Data Solutions. I&#39;ve spent <strong>25 years</strong> inside the tire and automotive industry &mdash; not watching it from the outside, but living in the data, the pricing decisions, and the software systems that keep dealerships running.</p>
+        <p>My journey started at <strong>Costar itself</strong>, headquartered in Sherwood Park, Alberta. That means I didn&#39;t just learn this software &mdash; I learned it at the source, alongside the people who built it.</p>
+        <p>Today I offer independent tire dealers something no generalist consultant can match: <strong>deep, native fluency in Costar</strong>, combined with the reporting and business intelligence skills to turn your data into decisions.</p>
+        <p>I keep my client list <strong>intentionally small</strong> &mdash; every engagement gets my full attention, not a junior analyst&#39;s.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box"><div class="stat-number">25</div><div class="stat-label">Years in Tire &amp; Auto</div></div>
+        <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Core Services</div></div>
+        <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Markets Served</div></div>
+        <div class="stat-box"><div class="stat-number" style="font-size:36px;padding-top:8px;">Costar</div><div class="stat-label">Exclusive Platform Focus</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="markets">
+  <div class="section-inner">
+    <div class="section-label">// Where I Work</div>
+    <h2 class="section-title">Serving Three Markets Remotely</h2>
+    <p style="max-width:560px; color:rgba(245,240,232,0.6); font-style:italic;">Costar is my world regardless of geography. If your dealership runs Costar, I can help &mdash; from Sherwood Park to Sydney.</p>
+    <div class="markets-row">
+      <div class="market-card"><div class="market-flag">&#127464;&#127462;</div><div class="market-name">Canada</div><div class="market-note">Costar HQ &middot; Sherwood Park, AB</div></div>
+      <div class="market-card"><div class="market-flag">&#127462;&#127482;</div><div class="market-name">Australia</div><div class="market-note">Via Microhouse &middot; Wilston, QLD</div></div>
+      <div class="market-card"><div class="market-flag">&#127475;&#127487;</div><div class="market-name">New Zealand</div><div class="market-note">Costar platform &middot; Remote support</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-label">// Get in Touch</div>
+    <h2 class="section-title">Let&#39;s Talk About Your Data</h2>
+    <div class="contact-box">
+      <div>
+        <p class="contact-lead">&ldquo;If your Costar system feels heavier than it should &mdash; we should talk.&rdquo;</p>
+        <p class="contact-detail">Reach out at <a href="mailto:tyrelitic@proton.me">tyrelitic@proton.me</a> or book a call directly. I&#39;ll respond within one business day.<br>No forms. No bots. Just a real conversation.</p>
+      </div>
+      <div class="contact-buttons">
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary" style="white-space:nowrap;">Email Pierre &rarr;</a>
+        <a href="https://calendar.proton.me/bookings#vPKWCAFpTAHfR4FjWbgsDrqKMrx75NHlermlY7PmTB0=" target="_blank" class="btn-secondary" style="white-space:nowrap;">Book a Call &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lang-divider">
+  <div class="lang-divider-line"></div>
+  <div class="lang-divider-text">Version Fran&#231;aise</div>
+  <div class="lang-divider-line"></div>
+</div>
+
+<!-- FRANCAIS -->
+
+<div class="hero" id="fr-hero" style="min-height:80vh; background: var(--steel-mid);">
+  <div class="hero-bg"></div>
+  <div class="hero-ring ring-1"></div>
+  <div class="hero-ring ring-3"></div>
+  <div class="hero-inner" style="min-height:80vh;">
+    <div class="hero-left">
+      <div class="hero-eyebrow">// Costar &middot; Pneu &amp; Automobile &middot; Consultation en donn&#233;es</div>
+      <h1 class="hero-title">Vos donn&#233;es<br>Costar.<br><span class="accent">Enfin utiles.</span></h1>
+      <p class="hero-subtitle">Consultation sp&#233;cialis&#233;e pour les concessionnaires de pneus ind&#233;pendants &mdash; mises &#224; jour de prix, nettoyage de donn&#233;es, tableaux de bord Excel et intelligence Power BI, con&#231;us autour du logiciel Costar que vous utilisez d&#233;j&#224;.</p>
+      <div class="hero-cta">
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary">Parlons-en &rarr;</a>
+        <a href="#fr-services" class="btn-secondary">Voir les services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="hero-fr.jpg" alt="Mercedes-AMG GT avec pneus Michelin">
+      <div class="hero-photo-credit">Photo by <a href="https://unsplash.com/@vdobrovolskyy" target="_blank">Volodymyr Dobrovolskyy</a> on Unsplash</div>
+    </div>
+  </div>
+</div>
+
+<section id="fr-services">
+  <div class="section-inner">
+    <div class="section-label">// Ce que je fais</div>
+    <h2 class="section-title">Services con&#231;us pour les concessionnaires Costar</h2>
+    <p style="max-width:560px; color:rgba(245,240,232,0.6); font-style:italic;">Chaque service est con&#231;u sp&#233;cifiquement pour les concessionnaires de pneus ind&#233;pendants utilisant Costar &mdash; aucune improvisation, aucune courbe d&#39;apprentissage de ma part.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">01 &middot; Nettoyage</div>
+        <div class="service-name">Nettoyage de donn&#233;es &amp; mises &#224; jour des prix</div>
+        <div class="service-desc">Votre base de donn&#233;es est le moteur. Assurons-nous qu&#39;il tourne proprement.</div>
+        <ul class="service-list">
+          <li>Mises &#224; jour saisonni&#232;res des matrices de prix</li>
+          <li>Nettoyage des donn&#233;es clients et d&#39;inventaire</li>
+          <li>R&#233;visions de la configuration Costar</li>
+          <li>Projets ponctuels ou r&#233;currents</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">02 &middot; Consultation</div>
+        <div class="service-name">Consultation en flux de travail Costar</div>
+        <div class="service-desc">Des conseils d&#39;expert pour tirer le meilleur parti de Costar au quotidien.</div>
+        <ul class="service-list">
+          <li>Forfait mensuel de consultation continue</li>
+          <li>Optimisation des flux de travail et meilleures pratiques</li>
+          <li>Accompagnement du personnel et am&#233;lioration des processus</li>
+          <li>&#192; distance &mdash; horaires flexibles, disponible en dehors des heures de bureau</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">03 &middot; Rapports</div>
+        <div class="service-name">Tableaux de bord Excel</div>
+        <div class="service-desc">Vos chiffres, pr&#233;sent&#233;s pour raconter une histoire sur laquelle votre &#233;quipe peut agir.</div>
+        <ul class="service-list">
+          <li>Rapports de ventes Excel personnalis&#233;s</li>
+          <li>Tableaux crois&#233;s dynamiques par repr&#233;sentant, lieu et produit</li>
+          <li>Forfait de mise &#224; jour mensuelle disponible</li>
+          <li>Con&#231;u pour les &#233;quipes de vente de pneus</li>
+        </ul>
+      </div>
+      <div class="service-card" style="background: linear-gradient(135deg, var(--steel) 0%, rgba(196,75,27,0.12) 100%);">
+        <div class="service-icon">04 &middot; Intelligence</div>
+        <div class="service-name">Tableaux de bord Power BI en direct</div>
+        <div class="service-desc">Intelligence en temps r&#233;el, connect&#233;e directement &#224; votre base de donn&#233;es Costar.</div>
+        <ul class="service-list">
+          <li>Connexion directe &#224; la base de donn&#233;es Costar</li>
+          <li>Tableaux de bord ventes, inventaire &amp; prix</li>
+          <li>Indicateurs cl&#233;s personnalis&#233;s pour votre concession</li>
+          <li>Intelligence d&#39;affaires automatis&#233;e</li>
+        </ul>
+        <div class="coming-soon">Lancement Printemps 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fr-about">
+  <div class="section-inner">
+    <div class="section-label">// Qui je suis</div>
+    <h2 class="section-title">Form&#233; &#224; la source</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Je suis <strong>Pierre LeBlanc</strong>, fondateur de Tyrelitic Data Solutions. J&#39;ai pass&#233; <strong>25 ans</strong> dans l&#39;industrie du pneu et de l&#39;automobile &mdash; pas en observateur, mais en travaillant directement avec les donn&#233;es, les d&#233;cisions de prix et les syst&#232;mes logiciels qui font fonctionner les concessions.</p>
+        <p>Mon parcours a commenc&#233; chez <strong>Costar m&#234;me</strong>, dont le si&#232;ge social est &#224; Sherwood Park, en Alberta. Cela signifie que je n&#39;ai pas simplement appris ce logiciel &mdash; je l&#39;ai appris &#224; la source, aux c&#244;t&#233;s des personnes qui l&#39;ont con&#231;u.</p>
+        <p>Aujourd&#39;hui, j&#39;offre aux concessionnaires ind&#233;pendants quelque chose qu&#39;aucun consultant g&#233;n&#233;raliste ne peut &#233;galer&nbsp;: une <strong>ma&#238;trise native et approfondie de Costar</strong>, combin&#233;e aux comp&#233;tences en rapports et en intelligence d&#39;affaires pour transformer vos donn&#233;es en d&#233;cisions concr&#232;tes.</p>
+        <p>Je maintiens une liste de clients <strong>intentionnellement restreinte</strong> &mdash; chaque mandat re&#231;oit toute mon attention.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box"><div class="stat-number">25</div><div class="stat-label">Ans dans le secteur du pneu</div></div>
+        <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Services principaux</div></div>
+        <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">March&#233;s desservis</div></div>
+        <div class="stat-box"><div class="stat-number" style="font-size:36px;padding-top:8px;">Costar</div><div class="stat-label">Plateforme exclusive</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fr-contact">
+  <div class="section-inner">
+    <div class="section-label">// Contactez-moi</div>
+    <h2 class="section-title">Parlons de vos donn&#233;es</h2>
+    <div class="contact-box">
+      <div>
+        <p class="contact-lead">&#171;&nbsp;Si votre syst&#232;me Costar semble plus lourd qu&#39;il ne devrait &mdash; parlons-en.&nbsp;&#187;</p>
+        <p class="contact-detail">&#201;crivez-moi &#224; <a href="mailto:tyrelitic@proton.me">tyrelitic@proton.me</a> ou r&#233;servez un appel directement. Je r&#233;pondrai dans un d&#233;lai d&#39;un jour ouvrable.<br>Pas de formulaires. Pas de robots. Une vraie conversation.</p>
+      </div>
+      <div class="contact-buttons">
+        <a href="mailto:tyrelitic@proton.me" class="btn-primary" style="white-space:nowrap;">&#201;crire &#224; Pierre &rarr;</a>
+        <a href="https://calendar.proton.me/bookings#vPKWCAFpTAHfR4FjWbgsDrqKMrx75NHlermlY7PmTB0=" target="_blank" class="btn-secondary" style="white-space:nowrap;">R&#233;server un appel &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Tyrelitic <span>Data Solutions</span></div>
+  <div class="footer-copy">&copy; 2026 Tyrelitic Data Solutions &middot; Pierre LeBlanc &middot; Sherwood Park, Alberta &middot; tyrelitic.com</div>
+</footer>
+
+</body>
+</html>
