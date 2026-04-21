@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English Homepage -->
+  <url>
+    <loc>https://tyrelitic.com/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tyrelitic.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tyrelitic.com/#fr-hero"/>
+  </url>
+
+  <!-- French Section -->
+  <url>
+    <loc>https://tyrelitic.com/#fr-hero</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tyrelitic.com/#fr-hero"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tyrelitic.com/"/>
+  </url>
+
+</urlset>
